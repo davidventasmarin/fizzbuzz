@@ -3,10 +3,10 @@
 ##### Cinturón Amarillo #####
 
 - [ ] Lista de números 1 entre 100
-- [ ] Números divisible 3, escribe "Fizz"
-- [ ] Números divisible 5, escribe "Buzz"
-- [ ] Números divisbles entre 3 y 5 escribe "FizzBuzz"
-- [ ] Números que no son divisibles entre 3 ni 5 escribir el numero
+- [X] Números divisible 3, escribe "Fizz"
+- [X] Números divisible 5, escribe "Buzz"
+- [X] Números divisbles entre 3 y 5 escribe "FizzBuzz"
+- [X] Números que no son divisibles entre 3 ni 5 escribir el numero
 
 ##### Cinturón Verde #####
 
