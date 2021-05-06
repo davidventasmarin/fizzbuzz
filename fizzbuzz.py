@@ -1,2 +1,2 @@
 def fizz(num):
-    return 4
+    return "Fizz"
