@@ -15,3 +15,7 @@ def test_divible_3_5():
     assert fizz(15) == "FizzBuzz"
     assert fizz(30) == "FizzBuzz"
     assert fizz(45) == "FizzBuzz"
+
+def test_no_divisible():
+    assert fizz(4) == 4
+    
