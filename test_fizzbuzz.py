@@ -18,4 +18,4 @@ def test_divible_3_5():
 
 def test_no_divisible():
     assert fizz(4) == 4
-    
+    assert fizz(7) == 7 
