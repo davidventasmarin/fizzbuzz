@@ -6,4 +6,4 @@ def fizz(num):
     elif num % 5 == 0:
         return "Buzz"
     else:
-        return num 
+        return num
