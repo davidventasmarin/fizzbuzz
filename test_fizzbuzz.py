@@ -5,7 +5,8 @@ def test_divisible3():
     assert fizz(3)  == "Fizz"
     assert fizz(6)  == "Fizz"  
     assert fizz(9)  == "Fizz"
-    assert fizz(32) == "Fizz" 
+    assert fizz(32) == "Fizz"
+    assert fizz(43) == "Fizz"
 
 def test_divisible5():
     assert fizz(5)  == "Buzz"
