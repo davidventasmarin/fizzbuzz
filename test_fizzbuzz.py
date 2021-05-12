@@ -31,3 +31,6 @@ def test_contiene_5():
     assert fizz(65) == "Buzz"
     assert fizz(52) == "Buzz"
     assert fizz(58) == "Buzz"
+
+def test_contiene_3_5():
+    assert fizz(35) == "FizzBuzz"
