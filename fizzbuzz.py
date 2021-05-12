@@ -3,7 +3,7 @@ def fizz(num):
     flag_divisible3    = 0
     flag_divisible5    = 0
     flag_divisible_3_5 = 0
-    flag_contiene5 = 0
+    flag_contiene5     = 0
 
     numero_temporal = list(str(num))
 
@@ -22,6 +22,9 @@ def fizz(num):
     else:
         texto = comprobar_flag(flag_contiene3, flag_divisible3, flag_divisible5, flag_divisible_3_5, flag_contiene5, num)
     
+
+    if flag_contiene5 and flag_contiene3:
+        return "FizzBuzz"
     
     texto = comprobar_flag(flag_contiene3, flag_divisible3, flag_divisible5, flag_divisible_3_5, flag_contiene5, num)
     return texto
