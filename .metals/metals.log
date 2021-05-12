@@ -1,1 +1,4 @@
 [0m2021.05.12 09:06:56 INFO  Started: Metals version 0.10.2 in workspace 'C:\Users\medlinetec\Desktop\Pruebas_de_codigo\Katas\fizzbuzz' for client vscode 1.56.0.[0m
+[0m2021.05.12 09:06:57 INFO  time: initialize in 1.33s[0m
+[0m2021.05.12 09:06:58 WARN  Build server is not auto-connectable.[0m
+[0m2021.05.12 09:06:58 WARN  no build tool detected in workspace 'C:\Users\medlinetec\Desktop\Pruebas_de_codigo\Katas\fizzbuzz'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m

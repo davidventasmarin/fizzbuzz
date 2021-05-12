@@ -24,10 +24,10 @@ def test_no_divisible():
 
 def test_contiene_3():
     assert fizz(32) == "Fizz"
-    assert fizz(53) == "Fizz"
+    assert fizz(73) == "Fizz"
     assert fizz(63) == "Fizz"
 
 def test_contiene_5():
     assert fizz(65) == "Buzz"
-    assert fizz(53) == "Buzz"
+    assert fizz(52) == "Buzz"
     assert fizz(58) == "Buzz"
