@@ -5,9 +5,6 @@ def test_divisible3():
     assert fizz(3)  == "Fizz"
     assert fizz(6)  == "Fizz"  
     assert fizz(9)  == "Fizz"
-    assert fizz(32) == "Fizz"
-    assert fizz(53) == "Fizz"
-    assert fizz (63) == "Fizz"
 
 def test_divisible5():
     assert fizz(5)  == "Buzz"
@@ -24,3 +21,13 @@ def test_no_divisible():
     assert fizz(7)  == 7
     assert fizz(1)  == 1
     assert fizz(16) == 16
+
+def test_contiene_3():
+    assert fizz(32) == "Fizz"
+    assert fizz(53) == "Fizz"
+    assert fizz(63) == "Fizz"
+
+def test_contiene_5():
+    assert fizz(65) == "Buzz"
+    assert fizz(53) == "Buzz"
+    assert fizz(58) == "Buzz"

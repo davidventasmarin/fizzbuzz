@@ -8,6 +8,7 @@ def fizz(num):
     for n in numero_temporal:
         if n == '3':
             flag_contiene3 = 1
+    
     if num % 3 == 0 and num % 5 == 0:
         flag_divisible_3_5 = 1
     elif num % 3 == 0:
