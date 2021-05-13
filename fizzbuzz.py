@@ -36,14 +36,20 @@ def fizz(num):
     elif resultado_comprobacion_flag == 1:
         resultado_texto = 1
 
-    if resultado_comprobacion_flag > comprobacion_numeros:
-        devuelvo_texto = resultado_comprobacion_flag
-    elif resultado_comprobacion_flag == 0 and comprobacion_numeros == 0:
+    devuelvo_texto         = decidir_resultado_prevalece(resultado_comprobacion_flag, resultado_comprobacion_numeros)
+    imprimo_text_divisible = imprimir_texto(devuelvo_texto)
+
+    if imprimo_text_divisible:
+        return imprimo_text_divisible
+    else:
         return num
+
+def decidir_resultado_prevalece(comprobacion_flag, comprobacion_numeros):
+    if comprobacion_flag > comprobacion_numeros:
+        devuelvo_texto = comprobacion_flag
     else:
         devuelvo_texto = comprobacion_numeros
-        
-    return imprimir_texto(devuelvo_texto)
+    return devuelvo_texto
 
 
 def imprimir_texto(resultado):
@@ -53,6 +59,7 @@ def imprimir_texto(resultado):
         return "Buzz"
     elif resultado == 3:
         return "FizzBuzz"
+
 
 def comprueba_numeros(numero):
     numero_temporal = list(str(numero))
