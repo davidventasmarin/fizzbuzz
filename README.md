@@ -11,7 +11,7 @@
 ##### Cinturón Verde #####
 
 - [X] Número es fizz si es divisible o tiene 3
-- [ ] Número es buzz si es divisible o tiene 5
+- [X] Número es buzz si es divisible o tiene 5
 
 ##### Cinturón Rojo #####
 
