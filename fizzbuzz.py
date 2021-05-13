@@ -18,7 +18,7 @@ def fizz(num):
     elif num % 5 == 0:
         flag_divisible5 = 1
 
-    resultado_comprobacion_flag = comprobar_flag(flag_divisible3, flag_divisible5, flag_divisible_3_5, num)
+    
     if num == 15:
         resultado_comprobacion_numeros = 3
     elif comprobacion_numeros == 2:
@@ -28,7 +28,7 @@ def fizz(num):
     elif comprobacion_numeros == 3:
         resultado_comprobacion_numeros = 3
     
-
+    resultado_comprobacion_flag = comprobar_flag(flag_divisible3, flag_divisible5, flag_divisible_3_5, num)
     if resultado_comprobacion_flag == 3:
         resultado_texto = 3
     elif resultado_comprobacion_flag == 2:
@@ -38,11 +38,14 @@ def fizz(num):
 
     devuelvo_texto         = decidir_resultado_prevalece(resultado_comprobacion_flag, resultado_comprobacion_numeros)
     imprimo_text_divisible = imprimir_texto(devuelvo_texto)
+    impr_texto_o_numero    = imprimo_text_divisible_o_numero(imprimo_text_divisible, num)
+    return impr_texto_o_numero
 
-    if imprimo_text_divisible:
-        return imprimo_text_divisible
+def imprimo_text_divisible_o_numero(resultado_text_divisible, numero):
+    if resultado_text_divisible:
+        return resultado_text_divisible
     else:
-        return num
+        return numero
 
 def decidir_resultado_prevalece(comprobacion_flag, comprobacion_numeros):
     if comprobacion_flag > comprobacion_numeros:
