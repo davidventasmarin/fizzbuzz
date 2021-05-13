@@ -1,12 +1,12 @@
 def fizz(num):
-    flag_divisible3    = 0
-    flag_divisible5    = 0
-    flag_divisible_3_5 = 0
+    flag_divisible3                 = 0
+    flag_divisible5                 = 0
+    flag_divisible_3_5              = 0
     
-    variable_devuelta  = 0
-    variable_devuelta1  = 0
+    resultado_comprobacion_numeros  = 0
+    resultado_texto                 = 0
+    devuelvo_texto                  = 0
 
-    devuelvo_texto     = 0
 
     numero_temporal = list(str(num))
     
@@ -22,21 +22,21 @@ def fizz(num):
     texto = comprobar_flag(flag_divisible3, flag_divisible5, flag_divisible_3_5, num)
         
     if num == 15:
-        variable_devuelta = 3
+        resultado_comprobacion_numeros = 3
     elif comprobacion_numeros == 2:
-        variable_devuelta = 2
+        resultado_comprobacion_numeros = 2
     elif comprobacion_numeros == 1:
-        variable_devuelta = 1
+        resultado_comprobacion_numeros = 1
     elif comprobacion_numeros == 3:
-        variable_devuelta = 3
+        resultado_comprobacion_numeros = 3
     
 
     if texto == 3:
-        variable_devuelta1 = 3
+        resultado_texto = 3
     elif texto == 2:
-        variable_devuelta1 = 2
+        resultado_texto = 2
     elif texto == 1:
-        variable_devuelta1 = 1
+        resultado_texto = 1
 
     if texto > comprobacion_numeros:
         devuelvo_texto = texto
@@ -47,8 +47,8 @@ def fizz(num):
 
     print("Esto vale comprobación numeros", comprobacion_numeros)
     print("\n Y esto vale text", texto)
-    print("\n Esto es lo que vale variable de vuelta ", variable_devuelta)
-    print("\n esto es lo que vale variable de vuelta 1", variable_devuelta1)
+    print("\n Esto es lo que vale variable de vuelta ", resultado_comprobacion_numeros)
+    print("\n esto es lo que vale variable de vuelta 1", resultado_texto)
 
     if devuelvo_texto == 1:
         return "Fizz"
