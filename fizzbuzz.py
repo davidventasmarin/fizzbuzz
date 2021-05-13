@@ -1,21 +1,3 @@
-"""
-dia 12-05-2021 me he quedado en que devuelve bien comprobación números no está integrado con todo el programa.
-
-Es decir, nosotros ese método funciona bien, pero los datos que me imprime salen del otro método.
-
-Antes de programar nada, abrimos la cmd desde el directorio del proyecto.
-Una vez dentro ponemos las siguientes líneas 
-
-    from fizzbuzz import fizz
-
-    fizz(35)
-
-Y comprobamos el resultado para hacernos una idea de en que punto lo dejamos.
-
-"""
-
-
-
 def fizz(num):
     flag_divisible3    = 0
     flag_divisible5    = 0
@@ -38,17 +20,6 @@ def fizz(num):
         flag_divisible5 = 1
 
     texto = comprobar_flag(flag_divisible3, flag_divisible5, flag_divisible_3_5, num)
-#
-   # ESTE CÓDIGO HACE QUE TENGAMOS UN FALLO, EL PROBLEMA QUE NO RELACIONA RESULTADOS DE COMPROBAR FLAG CON RESULTADO COMPRUEBA NUMEROS.
-   # if num == 15:
-   #     return "FizzBuzz"
-   # elif comprobacion_numeros == 2:
-   #     return "Buzz"
-   # elif comprobacion_numeros == 1:
-   #     return "Fizz"
-   # elif comprobacion_numeros == 3:
-   #     return "FizzBuzz"
-#
         
     if num == 15:
         variable_devuelta = 3
