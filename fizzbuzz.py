@@ -43,11 +43,6 @@ def fizz(num):
     else:
         devuelvo_texto = comprobacion_numeros
 
-    print("Esto vale comprobación numeros", comprobacion_numeros)
-    print("\n Y esto vale text", resultado_comprobacion_flag)
-    print("\n Esto es lo que vale variable de vuelta ", resultado_comprobacion_numeros)
-    print("\n esto es lo que vale variable de vuelta 1", resultado_texto)
-
     if devuelvo_texto == 1:
         return "Fizz"
     elif devuelvo_texto == 2:
