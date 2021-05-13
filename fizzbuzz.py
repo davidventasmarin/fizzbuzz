@@ -42,16 +42,17 @@ def fizz(num):
         return num
     else:
         devuelvo_texto = comprobacion_numeros
+        
+    return imprimir_texto(devuelvo_texto)
 
-    if devuelvo_texto == 1:
+
+def imprimir_texto(resultado):
+    if resultado == 1:
         return "Fizz"
-    elif devuelvo_texto == 2:
+    elif resultado == 2:
         return "Buzz"
-    elif devuelvo_texto == 3:
+    elif resultado == 3:
         return "FizzBuzz"
-
-
-
 
 def comprueba_numeros(numero):
     numero_temporal = list(str(numero))
