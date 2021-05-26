@@ -1,16 +1,14 @@
 def fizz(num):
-    numero_temporal                = list(str(num))
-    flag_divisible3                = divisible_3(num)
-    flag_divisible5                = divisible_5(num)
-    resultado_texto                = 0
-    devuelvo_texto                 = 0
+    numero_temporal           = list(str(num))
+    flag_divisible3           = divisible_3(num)
+    flag_divisible5           = divisible_5(num)
     
+    comprobacion_numeros      = contiene_3_yo_5(numero_temporal)
+    comprobacion_is_divisible = comprobar_divisibilidad(flag_divisible3, flag_divisible5)
+    devuelvo_texto            = decidir_resultado_prevalece(comprobacion_is_divisible, comprobacion_numeros)
+    imprimo_text_divisible    = imprimir_texto(devuelvo_texto)
+    impr_texto_o_numero       = imprimir_texto_si_no_es_divisible(imprimo_text_divisible, num)
     
-    comprobacion_numeros           = contiene_3_yo_5(numero_temporal)
-    comprobacion_is_divisible      = comprobar_divisibilidad(flag_divisible3, flag_divisible5)
-    devuelvo_texto                 = decidir_resultado_prevalece(comprobacion_is_divisible, comprobacion_numeros)
-    imprimo_text_divisible         = imprimir_texto(devuelvo_texto)
-    impr_texto_o_numero            = imprimo_text_divisible_o_numero(imprimo_text_divisible, num)
     return impr_texto_o_numero
 
 def divisible_3(num):
@@ -37,14 +35,14 @@ def comprobar_divisibilidad(is_divisible3, is_divisible5):
         devuelve_divisibilidad += 2
     return devuelve_divisibilidad
 
-def decidir_resultado_prevalece(comprobacion_flag, comprobacion_numeros):
-    if comprobacion_flag > comprobacion_numeros:
-        devuelvo_texto = comprobacion_flag
+def decidir_resultado_prevalece(comprobacion_is_divisible, comprobacion_numeros):
+    if comprobacion_is_divisible > comprobacion_numeros:
+        devuelvo_texto = comprobacion_is_divisible
     else:
         devuelvo_texto = comprobacion_numeros
     return devuelvo_texto
 
-def imprimo_text_divisible_o_numero(resultado_text_divisible, numero):
+def imprimir_texto_si_no_es_divisible(resultado_text_divisible, numero):
     if resultado_text_divisible:
         return resultado_text_divisible
     else:

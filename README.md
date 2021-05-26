@@ -16,8 +16,7 @@
 ##### Cinturón Rojo #####
 
 - [ ] Definir un rango dinámico de números en la lista
-- [ ] Hacer que el sistema no distinga entre mayúsculas y minúsculas.
-- [ ] No uses primitivas
+- [X] No uses primitivas * Teniendo en cuenta esta regla en el método principal.
 
 ##### Cinturón Negro #####
 - [ ] No uses condicionales.
