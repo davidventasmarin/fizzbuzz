@@ -1,7 +1,7 @@
 def fizz(num):
-    flag_divisible3                 = 0
-    flag_divisible5                 = 0
-    flag_divisible_3_5              = 0
+    flag_divisible3    = 0
+    flag_divisible5    = 0
+    flag_divisible_3_5 = 0
     
     #resultado_comprobacion_numeros  = 0
     resultado_texto                 = 0
@@ -10,7 +10,9 @@ def fizz(num):
 
     numero_temporal = list(str(num))
     
-    comprobacion_numeros = comprueba_numeros(numero_temporal)
+    comprobacion_numeros = contiene_3_yo_5(numero_temporal)
+    print(comprobacion_numeros)
+
     if num % 3 == 0 and num % 5 == 0:
         flag_divisible_3_5 = 1
     elif num % 3 == 0:
@@ -25,19 +27,25 @@ def fizz(num):
     impr_texto_o_numero            = imprimo_text_divisible_o_numero(imprimo_text_divisible, num)
     return impr_texto_o_numero
 
-def comprueba_numeros(numero):
+def divisible_3(num):
+    if num % 3 == 0:
+        return 1
+
+def divisible_5(num):
+    if num % 5 == 0:
+        return 1
+
+def contiene_3_yo_5(numero):
     if 3 or 5 in numero:
-        que_numero_contiene = verifica_numeros_contenido(numero)
+        que_numero_contiene = verifica_que_numeros_contiene(numero)
         return que_numero_contiene
 
-def verifica_numeros_contenido(numero):
+def verifica_que_numeros_contiene(numero):
     flag_numero_contenido = 0
-
     if '3' in numero:
         flag_numero_contenido += 1
     if '5' in numero:
         flag_numero_contenido += 2
-
     return flag_numero_contenido 
 
 def comprobar_flag(flag_divisible3, flag_divisible5, flag_divisible_3_5):
