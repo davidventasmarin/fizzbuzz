@@ -4,8 +4,8 @@ def fizz(num):
     flag_divisible_3_5 = 0
     
     #resultado_comprobacion_numeros  = 0
-    resultado_texto                 = 0
-    devuelvo_texto                  = 0
+    resultado_texto    = 0
+    devuelvo_texto     = 0
 
 
     numero_temporal = list(str(num))
@@ -20,8 +20,8 @@ def fizz(num):
     elif num % 5 == 0:
         flag_divisible5 = 1
 
-    resultado_comprobacion_numeros = resultado_comprobacion_flags(comprobacion_numeros)
     resultado_comprobacion_flag    = comprobar_flag(flag_divisible3, flag_divisible5, flag_divisible_3_5)
+    resultado_comprobacion_numeros = resultado_comprobacion_flags(comprobacion_numeros)
     devuelvo_texto                 = decidir_resultado_prevalece(resultado_comprobacion_flag, resultado_comprobacion_numeros)
     imprimo_text_divisible         = imprimir_texto(devuelvo_texto)
     impr_texto_o_numero            = imprimo_text_divisible_o_numero(imprimo_text_divisible, num)
