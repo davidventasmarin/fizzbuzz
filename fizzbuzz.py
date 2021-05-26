@@ -1,7 +1,7 @@
 def fizz(num):
-    flag_divisible3    = 0
-    flag_divisible5    = 0
-    flag_divisible_3_5 = 0
+    flag_divisible3    = divisible_3(num)
+    flag_divisible5    = divisible_5(num)
+    # flag_divisible_3_5 = if flag_divisible3 and  flag_divisible5: 
     
     #resultado_comprobacion_numeros  = 0
     resultado_texto    = 0
@@ -13,16 +13,9 @@ def fizz(num):
     comprobacion_numeros = contiene_3_yo_5(numero_temporal)
     print(comprobacion_numeros)
 
-    if num % 3 == 0 and num % 5 == 0:
-        flag_divisible_3_5 = 1
-    elif num % 3 == 0:
-        flag_divisible3 = 1
-    elif num % 5 == 0:
-        flag_divisible5 = 1
-
-    resultado_comprobacion_flag    = comprobar_flag(flag_divisible3, flag_divisible5, flag_divisible_3_5)
+    comprobacion_is_divisible      = comprobar_divisibilidad(flag_divisible3, flag_divisible5)
     resultado_comprobacion_numeros = resultado_comprobacion_flags(comprobacion_numeros)
-    devuelvo_texto                 = decidir_resultado_prevalece(resultado_comprobacion_flag, resultado_comprobacion_numeros)
+    devuelvo_texto                 = decidir_resultado_prevalece(comprobacion_is_divisible, resultado_comprobacion_numeros)
     imprimo_text_divisible         = imprimir_texto(devuelvo_texto)
     impr_texto_o_numero            = imprimo_text_divisible_o_numero(imprimo_text_divisible, num)
     return impr_texto_o_numero
@@ -48,15 +41,13 @@ def verifica_que_numeros_contiene(numero):
         flag_numero_contenido += 2
     return flag_numero_contenido 
 
-def comprobar_flag(flag_divisible3, flag_divisible5, flag_divisible_3_5):
-    if flag_divisible_3_5:
-        return 3
-    elif flag_divisible3:
-        return 1
-    elif flag_divisible5:
-        return 2
-    else:
-        return 0
+def comprobar_divisibilidad(is_divisible3, is_divisible5):
+    devuelve_divisibilidad = 0
+    if is_divisible3:
+        devuelve_divisibilidad += 1
+    if is_divisible5:
+        devuelve_divisibilidad += 2
+    return devuelve_divisibilidad
 
 def resultado_comprobacion_flags(cantidad_flags):
     if cantidad_flags == 2:
