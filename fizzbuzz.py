@@ -1,18 +1,12 @@
 def fizz(num):
-    flag_divisible3    = divisible_3(num)
-    flag_divisible5    = divisible_5(num)
-    # flag_divisible_3_5 = if flag_divisible3 and  flag_divisible5: 
+    numero_temporal                = list(str(num))
+    flag_divisible3                = divisible_3(num)
+    flag_divisible5                = divisible_5(num)
+    resultado_texto                = 0
+    devuelvo_texto                 = 0
     
-    #resultado_comprobacion_numeros  = 0
-    resultado_texto    = 0
-    devuelvo_texto     = 0
-
-
-    numero_temporal = list(str(num))
     
-    comprobacion_numeros = contiene_3_yo_5(numero_temporal)
-    print(comprobacion_numeros)
-
+    comprobacion_numeros           = contiene_3_yo_5(numero_temporal)
     comprobacion_is_divisible      = comprobar_divisibilidad(flag_divisible3, flag_divisible5)
     resultado_comprobacion_numeros = resultado_comprobacion_flags(comprobacion_numeros)
     devuelvo_texto                 = decidir_resultado_prevalece(comprobacion_is_divisible, resultado_comprobacion_numeros)
