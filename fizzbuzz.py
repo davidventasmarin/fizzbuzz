@@ -23,11 +23,6 @@ def divisible_5(num):
         return 1
 
 def contiene_3_yo_5(numero):
-    if 3 or 5 in numero:
-        que_numero_contiene = verifica_que_numeros_contiene(numero)
-        return que_numero_contiene
-
-def verifica_que_numeros_contiene(numero):
     flag_numero_contenido = 0
     if '3' in numero:
         flag_numero_contenido += 1
