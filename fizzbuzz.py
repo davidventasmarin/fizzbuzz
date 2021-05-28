@@ -5,27 +5,27 @@ def fizz(num):
         Imprimir Buzz si tiene o es divisible entre 5
         Imprimir fizzbuss si se dan las dos condiciones anteriores
         Imprimir el número si no se dan ninguna de las dos condiciones '''
-    numero_temporal           = list(str(num))
-    flag_divisible3           = divisible_3(num)
-    flag_divisible5           = divisible_5(num)
-    comprobacion_numeros      = contiene_3_yo_5(numero_temporal)
-    is_divisible              = comprobar_divisibilidad(flag_divisible3, flag_divisible5)
-    devuelvo_texto            = decidir_resultado_prevalece(is_divisible, comprobacion_numeros)
-    imprimo_text_divisible    = imprimir_texto(devuelvo_texto)
-    impr_texto_o_numero       = imprimir_texto_si_no_es_divisible(imprimo_text_divisible, num)
+    numero_temporal        = list(str(num))
+    flag_divisible3        = divisible_3(num)
+    flag_divisible5        = divisible_5(num)
+    comprobacion_numeros   = contiene_3_yo_5(numero_temporal)
+    is_divisible           = comprobar_divisibilidad(flag_divisible3, flag_divisible5)
+    devuelvo_texto         = decidir_resultado_prevalece(is_divisible, comprobacion_numeros)
+    imprimo_text_divisible = imprimir_texto(devuelvo_texto)
+    impr_texto_o_numero    = imprimir_texto_si_no_es_divisible(imprimo_text_divisible, num)
     return impr_texto_o_numero
 
 def divisible_3(num):
     ''' Ver si es divisible entre 3 '''
-    if num % 3 == 0:
-        return 1
-    return None
+    resultado    = num % 3
+    is_divisible = resultado == 0
+    return is_divisible
 
 def divisible_5(num):
     ''' Ver si es divisible entre 5 '''
-    if num % 5 == 0:
-        return 1
-    return None
+    resultado = num % 5
+    is_divisible = resultado == 0
+    return is_divisible
 
 def contiene_3_yo_5(numero):
     ''' Verificamos en el número si contiene 3 y/o 5'''
