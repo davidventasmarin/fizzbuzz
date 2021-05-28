@@ -61,10 +61,6 @@ def imprimir_texto_si_no_es_divisible(resultado_text_divisible, numero):
 
 def imprimir_texto(resultado):
     ''' Aquí sabemos por las flags por que número es divisible, e imprimimos el texto '''
-    if resultado == 1:
-        return "Fizz"
-    elif resultado == 2:
-        return "Buzz"
-    elif resultado == 3:
-        return "FizzBuzz"
-    return None
+    lista_strings = [None, "Fizz", "Buzz", "FizzBuzz"]
+
+    return lista_strings[resultado]
